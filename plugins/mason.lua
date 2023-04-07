@@ -1,5 +1,17 @@
 -- customize mason plugins
 return {
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ui = {
+        icons = {
+          package_pending = "󱎖 ",
+          package_installed = "◍ ",
+          package_uninstalled = " ",
+        },
+      }
+    }
+  },
   -- use mason-lspconfig to configure LSP installations
   {
     "williamboman/mason-lspconfig.nvim",
@@ -13,7 +25,7 @@ return {
         "emmet_ls",
         "html",
         "marksman",
-        "intelephense",
+        -- "intelephense",
         "pyright",
         "stylelint_lsp",
       },

@@ -9,7 +9,7 @@ return {
     -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
     config.sources = {
       -- Diagnostics
-      -- null_ls.builtins.diagnostics.editorconfig_checker,
+      null_ls.builtins.diagnostics.editorconfig_checker,
       null_ls.builtins.diagnostics.phpcs.with({
         command = "/Users/bego/.composer/vendor/bin/phpcs",
         extra_args = { '--standard=WordPress-Extra' },

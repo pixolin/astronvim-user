@@ -14,19 +14,31 @@ return {
     opts = {
       integrations = {
         gitsigns = true,
-        sandwich = false,
-        mini = true,
-        leap = true,
-        markdown = true,
-        neotest = true,
-        overseer = true,
-        ts_rainbow2 = true,
         notify = true,
+        noice = true,
       },
       transparent_background = true,
       show_end_of_buffer = true,
     },
   },
-  -- { import = "astrocommunity.diagnostics.trouble-nvim" },
-  { import = "astrocommunity.editing-support.todo-comments-nvim" }
+  { import = "astrocommunity.diagnostics.trouble-nvim" },
+  {
+    "trouble.nvim",
+    opts = {
+      use_diagnostic_signs = false,
+      signs = {
+        -- icons / text used for a diagnostic
+        error = "",
+        warning = "",
+        hint = "",
+        information = "",
+        other = "﫠"
+      },
+    },
+  },
+  {
+    import = "astrocommunity.editing-support.todo-comments-nvim",
+    event = "User AstroFile"
+  },
+  { import = "astrocommunity/utility/noice-nvim/" },
 }
